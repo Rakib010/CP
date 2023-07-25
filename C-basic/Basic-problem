@@ -1,0 +1,268 @@
+
+#include <stdio.h>
+int main() {
+  int n;
+  scanf("%d", &n);
+  for (int row = 1; row<=n; row++) {
+    for (int col = 1; col<=n; col++) {
+      if (row == 1 || row == n || col == 1 || col == n) {
+        printf("2 ");
+      } else {
+        printf("1 ");
+      }
+    }
+    printf("\n");
+  }
+}
+
+// 1.ASCII value......
+#include <stdio.h>
+int main() {
+  int n;
+  char c;
+   // printf("Enter number\n");
+    //scanf("%d", &n);
+    printf("Enter character\n");
+    scanf("%c", &c);
+   //printf("ascii value of %d = %c\n", n, n);
+    printf("Ascll value %c = %d\n", c, c);
+}
+// 2.Find the size of int,float,double,char.......
+#include<stdio.h>
+int main(){
+ int intType;
+  float floatType;
+  char charType;
+  double doubleType;
+  printf("size of int: %zu bytes\n",sizeof(intType));
+  printf("size of float: %zu bytes\n",sizeof(floatType));
+  printf("size of char: %zu bytes\n",sizeof(charType));
+  printf("size of double: %zu bytes\n",sizeof(doubleType));
+}
+// 3.swap two number.....
+#include <stdio.h>
+int main() {
+  int a, b, t;
+  printf("\nbefore Swap two number:");
+  scanf("%d %d", &a, &b);
+  t = a;
+  a = b;
+  b = t;
+  printf("After swap:%d\n", a);
+  printf("After swap:%d\n", b);
+}
+// 4.Even or odd...
+#include <stdio.h>
+int main() {
+  int i;
+  scanf("%d", &i);
+    if (i % 2 == 0)
+      printf("Even\n");
+    else
+      printf("Odd\n");
+}
+// 5.C Program to Check Whether a Character is a Vowel or Consonant..
+#include <stdio.h>
+int main() {
+  char c;
+  scanf("%c", &c);
+  {
+    if (c == 'a' || c == 'i' || c == 'e' || c == 'o' || c == 'u' || c == 'A' ||
+        c == 'I' || c == 'E' || c == 'O' || c == 'U')
+      printf("vowel");
+    else
+      printf("Consonant");
+  }
+}
+//6.C Program to Find the Largest Number Among Three Numbers..
+#include <stdio.h>
+int main() {
+  int a, b, c;
+  printf("Enter theree number:");
+  scanf("%d %d %d", &a, &b, &c);
+  {
+    if (a > b && a > c)
+      printf("valu of 'A'=%d", a);
+    else if (a < b && b > c)
+      printf("Valu of 'B'=%d", b);
+    else
+      printf("valu of 'C'=%d", c);
+  }
+}
+//7.C Program to Find the Roots of a Quadratic Equation.
+// C Program to Check Leap Year....
+#include <stdio.h>
+int main() {
+  int year;
+  scanf("%d", &year);
+  if (year % 400 == 0 || year % 4 == 0)
+    printf("%d leap year", year);
+  else //(year%100==0)
+    printf("%d not leap year", year);
+}
+//8.C Program to Check Whether a Number is Positive or Negative..
+#include <stdio.h>
+int main() {
+  int n;
+  scanf("%d", &n);
+  if (0 < n )
+    printf("postive number");
+  else
+    printf("Negetive number");
+}
+//9.C Program to Check Whether a Character is an Alphabet or not...
+#include <stdio.h>
+int main() {
+  char c;
+  scanf("%c", &c);
+  if ((c >= 'a' && c <= 'z') || ( c >= 'A' && c <='z')) {
+    printf("%c is an alphabet", c);
+  } else {
+    printf("%c is not alphabet", c);
+  }
+}
+//10.C Program to Calculate the Sum of Natural Numbers..
+#include <stdio.h>
+int main() {
+  int n, sum = 0;
+  scanf("%d", &n);
+  for (int i = 1; i < n; i++) {
+    sum = sum + i;
+  }
+  printf("%d", sum);
+}
+//11.C Program to Find Factorial of a Number..
+#include <stdio.h>
+int main() {
+  int n, f=1;
+  scanf("%d", &n);
+  for (int i = 1; i < n; i++) {
+    f = f * i;
+  }
+  printf("%d", f);
+}
+//12.C Program to Generate Multiplication Table..
+#include <stdio.h>
+int main() {
+  int n, i;
+  scanf("%d", &n);
+  for (i = 1; i <=10; i++)
+    printf("%d * %d = %d\n", n, i, n * i);
+  }
+//13.C Program to Display Fibonacci Sequence..
+#include <stdio.h>
+int main() {
+  int n, fast = 0, second = 1;
+  int third = fast + second;
+  printf("Enter number:");
+  scanf("%d", &n);
+  printf("Fibonacci serices:%d, %d,", fast, second);
+  for (int i = 3; i < n; i++) {
+    printf("%d,", third);
+    fast = second;
+    second = third;
+    third = fast + second;
+  }
+}
+//14.C Program to Find GCD of two Numbers.. 
+#include<stdio.h>
+int main(){
+  int n1,n2,gcd;
+  scanf("%d %d",&n1,&n2);
+  for(int i=1;i<=n1 && i<n2;++i)
+    {
+      if(n1%i==0 && n2%2==0)
+        gcd=i;
+    }
+  printf("gcd %d of %d and = %d",n1,n2,gcd);
+}
+
+
+//“How to take input without spaces in C” Code Answer’s
+#include <stdio.h>
+
+int main(){
+    char name[20];
+
+    printf("Enter a name : ");
+    scanf("%[^\n]%*c", &name);
+
+    printf("the name entered is: %s\n", name);
+
+return 0;
+}
+
+#include<stdio.h>
+int main()
+{
+char ch;
+char s[100],sen[100];
+scanf("%c",&ch);
+scanf("%s",s);
+scanf(" %[^\n]%*c",sen);
+//fgets(sen,sizeof(sen),stdin); //string read
+printf("%c\n",ch);
+printf("%s\n",s);
+//puts(sen); //display string
+printf("%s",sen);
+    return 0;
+}
+
+// sum of five digit number..
+/*#include <stdio.h>
+int main() {
+  int n, digit, sum = 0, temp;
+  scanf("%d", &n);
+  temp=n;
+  for (int i = 0; i < n; i++) {
+    digit = temp % 10;
+    sum = sum + digit;
+    temp = temp / 10;
+  }
+  printf("%d", sum);
+}
+
+#include<stdio.h>
+int main(){
+ int i;
+  scanf("%d",&i);
+        if(i==1) {printf("one\n");}
+       else if(i==2) {printf("two\n");}
+        else if(i==3) {printf("three\n");}
+        else if(i==4) {printf("four\n");}
+        else if(i==5) {printf("five\n");}
+       else if(i==6) {printf("six\n");}
+       else if(i==7) {printf("seven\n");}
+       else if(i==8) {printf("eight\n");}
+        else  if(i==9) {printf("nine\n");}
+      else {
+        printf("Greater than 9");}
+}
+
+#include <stdio.h>
+int main() {
+  int a[50], sum = 0, n, i;
+  scanf("%d", &n);
+  for (i = 0; i < n; i++) {
+    scanf("%d", &a[i]);
+  }
+  for (i = 0; i < n; i++) {
+    sum = sum + a[i];
+  }
+    printf("%d\n", sum);
+}
+
+#include<stdio.h>
+int main()
+{
+  int i,n,a[100];
+  scanf("%d",&n);
+  for(i=0;i<n;i++)
+    {
+      scanf("%d",&a[i]);
+    }
+  for(i=n-1;i>=0;i--)
+    {
+      printf("%d",a[i]);
+    }  
+}
