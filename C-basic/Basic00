@@ -1,0 +1,25 @@
+//include<stdio.h> ==> standard input output
+//#include = specifices a file to be included 
+// int main() = The statement int main() indicates that the function returns an integer value to the operating system.
+//void main() = doesn't return any information
+//void main() {}= All the code inside the curly braces {} runs first
+// = This is single line comment
+/* = This is multi-line comment */
+//syntex error = Case Sensitivity = Most of the words in the code use all lowercase letters. This is known as case-sensitivity. 
+// Semicolon = ; Double Quotes = "" 
+// \n = new line 
+//Compiling = i can't understand (The gcc application, or GNU Compiler Collection is a compiler used to compile C programs)
+
+ // Escape Sequences	Character :
+
+/*\b	Backspace
+\f	Form feed
+\n	Newline
+\r	Return
+\t	Horizontal tab
+\v	Vertical tab
+\\	Backslash
+\'	Single quotation mark
+\"	Double quotation mark
+\?	Question mark
+\0	Null cha*/
