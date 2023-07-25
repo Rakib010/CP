@@ -1,0 +1,233 @@
+//Operators in c 
+
+// Arithmetic Operators:
+ //Ex = +,-,*,/,%,++,--,%;
+//unary operator =  Operators that operate or work with a single operand are unary operators. (operator - +,-)
+ //Ex: Increment(++) and Decrement(–-) Operators
+ /* #include<stdio.h>
+   int main(){
+    int x=5;
+     printf("%d\n",x++);
+     printf("%d\n",++x);
+    x=5;
+    printf("%d\n",++x);
+    printf("%d\n",x++);
+   }*/
+/*#include<stdio.h>
+ int main(){
+  int val = 5;
+    ++val;
+    val--;
+   printf("%d",val);
+}*/
+//Binary operator = Operators that operate or work with two operands are binary operators.(operand - x,y,z)
+//Ex:Addition(+), Subtraction(-), multiplication(*), Division(/) operators.
+/*#include<stdio.h>
+int main(){
+  int a=2,b=4,c;
+  c=a+b;
+  c=a-b;
+  c=a*b;
+  c=a/b;
+  printf("%d\n",c);
+}*/
+
+//Relational Operators:
+//These are used for the comparison of the values of two operands.
+// Equal==, greater than >, less than <, not equal !=, greater than or equal >=, less than equal <=.
+
+/*#include <stdio.h>
+
+int main() {
+
+   int a = 10, b = 20, result;
+
+   // Equal
+   result = (a==b);
+   printf("(a == b) = %d \n",result);
+
+   // less than
+   result = (a<b);
+   printf("(a < b) = %d \n",result);
+
+   // greater than
+   result = (a>b);
+   printf("(a > b) = %d \n",result);
+
+   // less than equal to
+   result = (a<=b);
+   printf("(a <= b) = %d \n",result);
+
+   return 0;
+}*/
+
+//Logical Operators:
+//Logical Operators are used to combine two or more conditions.The result of the operation of a logical operator is a Boolean value either true or false
+
+//&&-Logical AND, ||-Logical OR, !-Logical NOT .
+
+//(4 != 5) && (4 < 5);     // true
+
+/*#include <stdio.h>
+int main()
+{
+    int a = 5, b = 5, c = 10, result;
+
+    result = (a == b) && (c > b);
+    printf("(a == b) && (c > b) is %d \n", result);
+
+    result = (a == b) && (c < b);
+    printf("(a == b) && (c < b) is %d \n", result);
+
+    result = (a == b) || (c < b);
+    printf("(a == b) || (c < b) is %d \n", result);
+
+    result = (a != b) || (c < b);
+    printf("(a != b) || (c < b) is %d \n", result);
+
+    result = !(a != b);
+    printf("!(a != b) is %d \n", result);
+
+    result = !(a == b);
+    printf("!(a == b) is %d \n", result);
+
+    return 0;
+}*/
+
+//Assignment operator:
+//An assignment operator is used to from an assifnment experesson,which assigns valu to an identifer.the most comonly used assignment operator is=
+//Ex:
+ //Identifier = expression; // x = 20;
+// a=b,a+=b,a-=b,a*=b,a/=b,a%=b,
+//a=a+b;a=b;a=a-b;a=a*b,a=a/b;a=a%b; //same as
+
+/*#include<stdio.h>
+int main(){
+int a = 2, c;
+  c = a++;
+  c = a + 2;
+  printf("%d",c);
+}*/
+
+//Modulus operator(%):
+//The modulus operator always works with integer numbers only.
+ // x =5,y=-8
+// x%y = x-(x/y)*y;
+// 5%-8 = 5-(-8/5)*-8
+//      =-3.
+/*include <stdio.h>
+int main(void)
+{
+    // To store two integer values
+    int x, y;
+    // To store the result of
+    // the modulo expression
+    int result;
+  
+    x = 3;
+    y = 4;
+    result = x % y; // left to right 
+    printf("%d", result); // remainder = 3
+
+    result = y % x; // 4%3 = 3/4
+    printf("\n%d", result); // remainder = 1 
+ 
+    x = 4;
+    y = 2;
+    result = x % y;
+    printf("\n%d", result); // remainder = 0
+ 
+    return 0;
+*/
+/*#include <stdio.h>
+int main(void)
+{
+    // To store two integer values
+    int x, y;
+ 
+    // To store the result of
+    // the modulo expression
+    int result;
+ 
+    x = -3;   
+    y = 4;
+    result = x % y; -3%4 = - // 3%-4 = 3 
+    printf("%d", result); remainder = -3 // 
+ 
+    x = 4;
+    y = -2;
+    result = x % y;
+    printf("\n%d", result); // remainder = 0
+ 
+    x = -3;
+    y = -4;
+    result = x % y; 
+    printf("\n%d", result); //remainder = -3
+ 
+    return 0;
+}*/
+
+//Operator Precedence:
+//
+/*#include <stdio.h>
+ int main(){
+  if(5 > 10 - 5 && 5) // 10-5 = 5 // 5>5 && 5 // 0 && 5
+    {
+    printf("Hello\n"); //true
+    } else{
+    printf("Hi"); //false
+    }
+}*/
+/*#include<stdio.h>
+int main(){
+  if(1==2 !=0){
+    printf("Hi");
+  }else{
+    printf("Hello");
+  }
+}*/
+//1.(),-->,++,-- 2.++,--,+-,!,~,*,& 3.*,/,% 4.+,- 5.<<,>> 6.<,<=,>,>= 
+//7.==,!= 8.& 9.^ 10.| 11.&& 12.|| 13.?,; 14.=,+=,-=,/=,%=,*=,^=,>=,<=
+//15., 
+
+// assainment,tenary,unary --> these opertar work (Right to left)
+// other opertar work (left to right) 
+
+//()-Parentheses (function call)- left-to-right
+//[]-Brackets (array subscript)	- left-to-right
+//.-Member selection via object name- left-to-right
+//->-Member selection via a pointer	- left-to-right
+//a++/a–- Postfix increment/decrement- left-to-right
+//++a/–a	Prefix increment/decrement - right-to-left
+//+/-	Unary plus/minus-  right-to-left
+
+//!~Logical negation/bitwis complement -	right-to-left
+//(type)	Cast (convert value to temporary value of type)- right-to-left
+//*	Dereference	-  right-to-left
+//&	Address (of operand)- 	right-to-left
+//sizeof	Determine size in bytes on this implementation -	right-to-left
+
+//*,/,%	Multiplication/division/modulus - left-to-right
+//+/-	Addition/subtraction	-  left-to-right
+//<< , >>	Bitwise shift left, Bitwise shift right	 - left-to-right
+//< , <=	Relational less than/less than or equal to -	left-to-right
+//> , >=	Relational greater than/greater than or equal to - left-to-right
+
+//== , !=	Relational is equal to/is not equal to -  left-to-right
+
+//	&	Bitwise AND	 - left-to-right
+//^	Bitwise exclusive OR - left-to-right
+// |	Bitwise inclusive OR - left-to-right
+//	&&	Logical AND - left-to-right
+//	||	Logical OR	-  left-to-right
+//	?:	Ternary conditional -  right-to-left
+
+//=	Assignment	- right-to-left
+//+= , -=	Addition/subtraction assignment	 - right-to-left
+//*= , /=	Multiplication/division assignment -	right-to-left
+//%= , &=	Modulus/bitwise AND assignment -  right-to-left
+//^= , |=	Bitwise exclusive/inclusive OR assignment	 - right-to-left
+//<>=	Bitwise shift left/right assignment - right-to-left
+//	,	expression separator - left-to-right
+
+//Ternary operator
