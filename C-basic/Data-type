@@ -1,0 +1,215 @@
+
+//Data tybe in c:
+ // 1 byte = 8 bit.
+//  2 GB = 2*1024mb*1024kb*1024byte*8bit
+
+//signed - allows for storage of both positive and negative numbers.
+//unsigned - allows for storage of only positive numbers.
+//unsigned int x = 35;
+//int y = -35;  // signed int
+//int z = 36;  // signed int
+// invalid code: unsigned int cannot hold negative integers
+//unsigned int num = -35;
+
+//three types of data type:
+
+//1.primary = int,char,float,double,void; 
+ //int:
+// 4 byte int(%d)=(-2,147,483,648 to 2,147,483,647) 
+// 4 long int(%ld)=(-2,147,483,648 to 2,147,483,647)
+// 4 unsigned long int(%lu)=(0 to 4,294,967,295 )
+// 8 long long int(%lld)=(-(2^63) to (2^63)-1 )
+// 8 unsigned long long int(%llu) =  (0 to 18,446,744,073,709,551,615)
+// 2 short int(%hd) = (-32,768 to 32,767 )
+// 2 unsigned short int (%hu) = (0 to 65,535 )
+//char:
+// 1 byte signed char(%c)  = (-128 to 127)
+// 1 byte unsigned char(%c) = (0 to 255 )
+//float:
+// 4 byte float (%f) = (1.2E-38 to 3.4E+38) 
+// 8 byte double (%lf) = (2.3E-308 to 1.7E+308) 
+// 16/10 byte long double (%Lf) = (3.4E-4932 to 1.1E+4932)
+ 
+//2.Derived = pointers,Arrays,structures,union;
+
+//3.user-defined = Enum,Typeder;
+
+//variable = A variable is a name of the memory location. 
+//different types of variables (defined with different keywords;
+//data_type = variable_name =valu;
+//example: 
+    //int number =8;  //whole number
+    //float number1 = 3.5 //point number(6 decimal)
+    //double number = 3444.4; (15 decimal)
+    //char ch = 'a ';  //character
+
+//Multiple variable same data type:
+
+/*#include<stdio.h>
+int main(){
+int x,y,z,a=5,b=6;
+int x = y = z = 7; //same 
+printf("%d",x,y,z,a,b);
+  }*/
+
+//Local variable:
+
+/*#include<stdio.h>
+int main(){
+  int x=10;//local variable
+  int y=12 //local variable
+  printf("%d",x,y);
+  return 0;
+}*/
+/*#include<stdio.h>
+int main()
+{
+  int a=15;//local variable
+  printf("Inside the main funcation a=%d\n",a);
+  display(); 
+}
+void display()
+{
+  printf("Inside the display function a= %d\n"); 
+   //Error bcz local variable work only main function not another function
+}*/
+//Automatic variable:
+
+//void main(){
+//int a=80; // a local variable (it is also automatic variable)
+//auto int b=50; // an automatic variable //use auto keyword,called automatic variable
+
+//External variable:
+//extern int a=10;// external variable (also a global variable
+
+/*#include <stdio.h>
+extern int x = 32;
+int b = 8;
+int main() {
+   auto int a = 28;
+   extern int b;
+   printf("The value of auto variable : %d\n", a);
+   printf("The value of extern variables x and b : 
+   %d,%d\n",x,b);
+    x = 15;
+   printf("value of modified extern variable x : %d\n",x);
+   return 0;
+}*/
+
+//Global variable:
+
+/*#include<stdio.h>
+int a = 5;//global variable 
+int b = 4; //global variable
+int main(){
+  printf("%d",a+b);
+  return 0;
+}*/
+
+//static variable: // used static variable saveing memory
+
+//Names can contain letters, digits and underscores
+//Names must begin with a letter or an underscore (_)
+//Names are case sensitive (myVar and myvar are different variables)
+//int number = 5;
+//int number1 = 5;
+//Names cannot contain whitespaces or special characters like !, #, %, etc.
+//Reserved words (such as int) cannot be used as names
+//int(data type) int (variable) = 5(value);
+//int int_count =5;
+//int intcount =5;
+
+//format specifier
+//int-%d,float-%f,double-%lf,char-%c;//scanf,output
+
+//Constants/final 2 types:
+//1.Numeric Constants
+ //Integer Constants = Decimal,Octal,Hexadecim;
+ //Ex - 15, -265, 0, 99818, +25, 045, 0X6
+//Real Constants
+//2.Character Constants
+ //Single Character Constants 
+ //Ex = 'X', '5', ';' 
+//String Constants 
+ //Ex = "Hello!", "2015", "2+1"
+//Backslash Character Constants:
+ //Ex=\n,\t;
+  
+//const int x = 5;
+// x=10;       //not change x value bcz int const 
+//printf("%d",x);  
+
+//Type casting (implicit,explicit):
+// converting one data type to another is called type casting.
+//implicit data casting (wedening)-(automatically)
+//converting a smaller type to a larger type size:
+//byte->short->int->long->float->double
+
+/*#include<stdio.h>
+int main(){
+int x =10;
+double y=x;
+printf("%lf",y); 
+}*/
+
+//explicit data casting (narrowing)-(manually) 
+// converting a larger type to a smaller size type:
+//double->float->long->int->short->byte
+
+ /*#include<stdio.h>
+  void main()
+  {
+  double x=10;
+  int y =(int) x;
+  printf("%d",y);
+  }*/
+
+//Errors in c
+
+//Syntax errors:
+//Missing Parenthesis (})
+//Printing the value of variable without declaring it
+//Missing semicolon like this:
+/*
+#include<stdio.h>
+void main()
+{
+    int x = 10;
+    int y = 15;
+     
+    printf("%d", (x, y)) // semicolon missed
+}*/
+
+//Runtime Error:
+
+//Linker Errors: 
+ /* #include<stdio.h>
+ int Main() // Here Main() should be main()
+{   int a = 10;
+    printf("%d", a);
+}*/
+
+//Logical Errors:
+
+/*#include<stdio.h>
+int main(){
+  int a=1,sum=0;
+  for(int i=0;i<=20;i++); //semicolon after loop
+  {
+    sum=sum+a;
+    a++;
+  }
+   printf("%d",sum,a);
+  return 0;
+  }*/
+
+// Semantic Error:
+
+/*#include<stdio.h>
+int maina(){
+int x=2,y=3,z=1;
+  x+y=z;//semantic error
+  printf("%d",z);
+}*/
+//int a,b,c;
+//a+b=c; //semantic error
