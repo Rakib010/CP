@@ -19,7 +19,9 @@ using namespace std;
     name n;int i;
     for(int i=0;i<5;i++){
         cin>>n.name[i];
-    } cin>>n.age>>n.salary;  
+    } 
+    cin>>n.age>>n.salary;  
+  
     cout<<n.name<<" "<<n.age<<" "<<n.salary;
 
     cin>>x.boys>>x.girl; //union function
