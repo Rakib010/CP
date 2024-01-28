@@ -1,1 +1,101 @@
+ ** Array JS ** 
 
+    Note: Ber Ber variable & value decilar na kore ekber decilar kore sob gula kaj korsi 
+
+    const car =["sabb", "volvo", "audo"];
+    document.getElementById("demo").innerHTML = car;
+
+    const fruit = ["Banana","Orange","Apple","Mango"];
+    console.log(fruit.length);
+    console.log(fruit.sort());
+
+    //last index value check
+    console.log(fruit[fruit.length-1]); 
+
+   //Loop 
+   for(i = 0; i<fruit.length; i++){
+     console.log(i);
+     console.log(fruit[i]);
+   }
+
+   //foreach function array method
+   function myFunction(value){
+    console.log(value)
+   }
+   fruit.forEach(myFunction);
+
+    //add value arra
+   fruit.push("lemon");y
+   console.log(fruit) 
+
+   //create [Array] undefined hole 
+   const fruits = ["Banan","Orange","apple"];
+   fruits[7] = "Lemon";
+   console.log(fruits); 
+   
+   //Arrays use number index 
+   //Arrays are a special kind of objects, with numbered indexes.
+   const array = [1,2,3,4];
+   console.log(typeof array);
+
+   // object use named index 
+   const personn = {
+      name : "junior",
+      age : "24",
+      city : "dhaka",
+   };
+   console.log(typeof personn);
+
+   // ehkhane type of dile array ke object dekhai &  object ke tu object e dekhaibe 
+   // so amr jodi Array.isArray use kori tahole array hoile ture dekhaibe R object hoile false dekhaibe 
+   console.log(Array.isArray(array)); //true 
+   console.log(Array.isArray(personn)); //false
+    
+   //Array Methods
+     const fruit = ["Banan","Orange","Apple","Lemon"];
+
+     //connvert  array to string
+     console.log(fruit.toString()); 
+
+     //this function work to how to organaiz vabe string ke convart kore
+     console.log(fruit.join(" * ")); 
+     
+     //remove elament
+     console.log(fruit.pop()); 
+     console.log(fruit.push("kola")); //Add elements
+
+     console.log(fruit); 
+
+     //shift method -> remove first element
+     console.log(fruit.shift());
+     console.log(fruit);
+
+     //unshitf method -> add element first
+     console.log(fruit.unshift("Mango"));
+     console.log(fruit);
+
+     //delete keyword -> remove first value but not langht only name 
+     //Using delete() leaves undefined holes in the array.
+     console.log(delete fruit[0])
+     console.log(fruit);
+
+     //splice  method 
+    // first (2) hocche - koyta number por value add hobe
+    // 2nd (0) ta hocche - koyta  number remove kora lagbe 
+     console.log(fruit.splice(2, 0, "lemon","kiwi","malta"));
+     console.log(fruit);
+
+    //splice remove method 
+    // first (0) ta hocch - where new elements should add
+    // 2nd (1) ta hocche how many elements removed  
+    console.log(fruit.splice(0, 1));
+    console.log(fruit);
+
+
+
+
+
+   
+
+   
+   
