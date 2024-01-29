@@ -91,6 +91,55 @@
     console.log(fruit.splice(0, 1));
     console.log(fruit);
 
+  //Merging Arrays 
+    //2ta array sum kore 
+    const myGirls = ["Cecilie", "Lone", "Rabi", "Rabi"];
+    const myBoys = ["Emil", "Tobias", "Linus"];
+    const myChildren = myGirls.concat(myBoys);
+    console.log(myChildren);   
+
+   //3ta array sum //concat method using 
+   const daDa = ["Junior", "bhai"];
+   const threeSum = myGirls.concat(myBoys, daDa);
+   console.log(threeSum);
+
+   //Automatic toString()
+   // array theke toSring use na kore direct variable call korle o javascript buje nibe eita string 
+   const fruits = ["Banana", "Orange", "Apple", "Mango"];
+   document.getElementById("demo").innerHTML = fruits;
+ 
+   //Sort an array
+    const fruit = ["Banana", "Orange", "Apple", "Mango"];
+    console.log(fruit.sort());
+
+    //Reverse an array
+    console.log(fruit.reverse());
+
+    //Numeric sort - ascending order
+    const point = [40, 100, 1, 5, 25, 10];
+    point.sort(function(a,b){
+      return a-b;
+    });
+    console.log(point);
+
+    // array descending:
+     point.sort(function(a,b){
+      return b-a;
+     });
+     console.log(point);
+   
+     //Sorting an Array in Random Order
+     point.sort(function(a,b){
+      return 0.5 - Math.random();
+     });
+     console.log(point);
+
+     //Using Math.mix() -max value 
+    const x =  Math.max(40,50,30,23,21,400);
+    console.log(x);
+    // Math.min() - min value
+    const y =  Math.min(40,50,30,23,21,400);
+    console.log(y);
 
 
 
