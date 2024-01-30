@@ -1,1 +1,38 @@
+  ** Number **
+
+  let x = 0.2;
+  let y = 0.1;
+  console.log(x+y);  //Floating point arithmetic is not always 100% accurate:
+
+  
+  let xx = 10;
+  let yy = 20;
+  let zz = "the result is:" + xx + yy; //left to right 
+  console.log(zz);
+  let z = xx + yy + "the result is";
+  console.log(typeof z);
+
+  let number = "40";
+  let number1 = "10";
+  let div = number/number1;
+  console.log(div);
+
+  ** Number methods **
+    
+   let n = 123;
+   console.log(n.toString());
+   let r = 9.656;
+  console.log(r.toExponential(2));
+
+  console.log(Number(true));
+  console.log(Number("john"));
+
+  console.log(parseInt("10 20 30"));
+
+  console.log(parseFloat("10.33"));
+
+  console.log(Number.MAX_SAFE_INTEGER);
+  console.log(Number.MIN_VALUE);
+  console.log(Number.POSITIVE_INFINITY);
+  console.log(Number.NEGATIVE_INFINITY); */
 
