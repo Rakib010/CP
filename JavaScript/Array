@@ -141,8 +141,140 @@
     const y =  Math.min(40,50,30,23,21,400);
     console.log(y);
 
+// min number 
+    const digit = [40,50,10,39,20,2,6,12,3,0];
+    //let len = digit.length;
+    let min = Infinity;
+    while(digit.length){
+      if(digit[length]<min){
+        min = digit[length];
+      }
+    }
+    console.log(min);
 
+   //max number
+    let max = -Infinity;
+    while(digit.length){
+      if(digit[length]>max){
+        max = digit[length];
+      }
+    }
+  console.log(max);
+  
+  // Sorting Object Arrays
+  const cars = [
+    {type:"Volvo", year:2016},
+    {type:"Saab", year:2001},
+    {type:"BMW", year:2010}
+  ];
 
+  //Even if objects have properties of different data types, the sort() method can be used to sort the array.
+  cars.sort(function(a,b){
+    return a.year - b.year;
+   });
+   console.log(point)
+// forEach method
+const number = [45, 4, 9, 16, 25];
+
+function myFunction(value, index, array){
+    console.log(value,index,array);
+}
+number.forEach(myFunction); 
+
+//map method
+// 
+function myFunction(value, index, array){
+    return  value*2; 
+}
+console.log(number.map(myFunction)); 
+
+//Array filter 
+//
+function myFunction(value, index, array){
+    return  value > 10;
+}
+console.log(number.filter(myFunction)); 
+
+//Array reduce()
+// eitar kaj pura array ta ke sum kore er mani - ekta value te convert kora 
+function myFunction(total, value, index, array){
+    return total+value;
+}
+console.log(number.reduce(myFunction)); 
+//function er sathe r ekta parametar pass kora jay 
+//eitar kaj hocche total value ta defult 10 dorbe,
+console.log(number.reduce(myFunction, 10)); 
+
+//array reduceRight() -> right theke sum kora soro korbe, reduce er same kaj kore 
+
+//array every()
+//Ey function (18) ta array er sob value sathe compear korbe, jodi sob value gula
+// boro hoy tahole ture print korbe,r jodi ekta choto hoy tahole false print korbe. 
+function myFunction(value, index, array){
+    return  value > 18;
+}
+console.log(number.every(myFunction)); 
+ 
+//array some() -> value kaje kore array every moto,
+//eita just ekta value boro hoilei ture print korbe 
+
+//array indexOf(), array lastindexOf()-> same kaj kore 2ta 
+// eitar kaj kore array value er postion ber korar jonno
+//display te show korer jonno 1 sum korte hobe. 
+
+const fruit = ["apple", "Mango", "Orange", "Lemon"]
+console.log(fruit.indexOf("Mango")+1);
+
+//includes() -> jodi array te element thake tahole ture asbe else false asbe 
+console.log(fruit.includes("apple"));
+
+//array find ***
+//eitar kaj hocche first jei value ta 18 theke boro hobe sita print korbe
+function myFunction(value, index, array){
+    return  value > 18;
+}
+console.log(number.find(myFunction)); 
+
+//array from()-> iterable object,
+//creat arrray 
+ console.log(Array.from("ABCDEFG"));
+
+//keys() method -> ektu jamela ashe
+//Create an Array Iterator object
+    console.log(fruit.keys());
+
+// entries()->ektu jamela ashe 
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+console.log( fruits.entries());
+
+//Array with() Method
+//firt parametar(2) hocce kon index ta replace korte jacchi
+//2nd hocche ki neww name dibo
+const months = ["Januar", "Februar", "March", "April", "ju", "July"];
+console.log(months.with(4, "june"));
+
+//Array Spread (...)
+const q1 = ["Jan", "Feb", "Mar"];
+const q2 = ["Apr", "May", "Jun"];
+const q3 = ["Jul", "Aug", "Sep"];
+const q4 = ["Oct", "Nov", "Dcm"];
+
+console.log(...q1,...q2,...q3,...q4);
+
+//Array Const 
+
+//Cannot be Reassigned
+const cars = ["Saab", "Volvo", "BMW"];
+cars = ["Toyota", "Volvo", "Audi"];  // Error
+
+// You can create a constant array:
+const car = ["Saab", "Volvo", "BMW"];
+// You can change an element:
+cars[0] = "Toyota";
+// You can add an element:
+cars.push("Audi");
+
+//Const Block Scope
 
    
 
