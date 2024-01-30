@@ -1,1 +1,55 @@
+** String js ** 
 
+  let text = "abcdefghijklmnopqrestwuxyz";
+  console.log(text.length);
+
+  let x = "junior";
+  let y = new String ("junior");
+  let z = "junior";
+  console.log(x === z);
+
+  //string  method 
+
+  let str = "Apple, Banana, kiwi";
+  console.log(str.slice(7,13));
+
+  let textt = "Hello world";
+  console.log(textt.charAt(3));
+  console.log(textt.charCodeAt(3));
+
+  let txt = "i love bangladesh";
+  
+  console.log(txt.replace("bangladesh","usa"));
+  console.log(txt);
+   
+  console.log(txt.concat(" ",textt));
+
+  console.log(textt.split(","));
+  console.log(textt.split("")); 
+
+    let fname = "hey";
+   function changeName(){
+     console.log(fname);
+      fname = "dada";
+      console.log(fname);
+   }
+   console.log(fname);
+   changeName();
+
+    //string search 
+
+    let text = "please locate where 'locate' occurs";
+    console.log(text.indexOf('where'));
+    console.log(text.lastIndexOf('locate'))
+
+
+    //string templates
+
+   let  aa = `you  bro`; //template literals
+
+    let country = "Bangladesh";
+    let a = 17;
+    let b = 1;
+     
+    let sentence = `I love  ${country} and it's populaation is ${a+b} core`; //Interpolation
+      console.log(sentence);
