@@ -1,1 +1,22 @@
+ ** Object Js **
 
+  let car = {
+    name:"Fiat",
+    model: 500,
+    weight : "850kg",
+    color : "white",
+    start : function(){
+      this.stop();
+      console.log("car has started");
+    },
+    stop : function(){
+      console.log("car is stop");
+    }  
+  };
+  console.log(car.model);
+  car.start();
+
+  let a = "Rakib"; // literal synatx
+  let b = new String("Rakib");
+  console.log(a);
+  console.log(b);
