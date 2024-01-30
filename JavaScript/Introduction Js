@@ -1,1 +1,112 @@
+ ** Syntex,variables **
+ 
+  console.log('hello');
+  var a=5;
+  let b=6;
+  let c=a+b;
+  console.log(c);
 
+  // Let 
+  //let can't redeclared
+  //let block scop
+  //let can reassign
+
+  let x = 10;
+ {
+    let x = 4;
+    console.log(x);
+ }
+ console.log(x);
+
+ {
+    let x = 15;
+    console.log(x);
+ }
+
+ // let e hoisting hoy na 
+ carName = "volvo";
+ let carName;
+ console.log(carName);
+
+  let h ;  // let reassign kore jay 
+   h = 40;
+   h = 50;
+   h = 60;
+   console.log(h);
+
+ // var e hoisting hoy
+ // var golab scope
+ karName = "volvo";
+ var karName;
+ console.log(karName);
+
+ // Const 
+ // const can't reassign
+ // const block scope 
+ // const e hoisting hoy na 
+
+ const v = 5;
+
+
+ // operators 
+ let text1 = 'john';
+ let text2 = 'Doe';
+
+ let result = text1 + " " + text2;
+ 
+console.log(result);
+
+ let text = "what a very";
+  text += "nice day "; 
+  console.log(text);
+
+  let g = (5+5) * v;
+   console.log(g);
+
+   let s = 5;
+    s++;
+    let z = s; 
+
+    console.log(s);
+    console.log(z); 
+ 
+    // math.pow(x,y); 
+    
+    //data type 
+      
+    let x = 4 + 16 + "Volvo";
+    let y = 'volvo'+ 16 + 4;
+    console.log(x,y);
+
+    let a = 5;
+    let b = 6;
+    let c = 5;
+    (a==b) 
+    console.log(false);
+    (a==c)
+    console.log(true);
+    console.log(typeof a);
+
+    let person = {name:"Rakib",age:"24",city:"Dhaka"};
+    console.log(person);
+    console.log(typeof person);
+
+    function newFun(name, time){
+      console.log(name + " is sleeping from " + time)
+      return 
+   }
+   newFun('sony', '11');
+   newFun('vivo', '12'); 
+
+   function newFunction(a,b){
+      return a*b;
+   }
+   let ne = newFunction(3,4);
+   console.log(ne);
+
+   function hot(fahrenheit){
+      return(5/9) * (fahrenheit-32);
+
+   }
+   let htoo = hot(77);
+  console.log(htoo);  
