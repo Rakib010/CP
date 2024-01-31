@@ -1,1 +1,107 @@
-** Math Object Methods and Properties ** 
+
+ ** Math js **
+
+console.log(Math.E);        // returns Euler's number
+console.log(Math.PI);       // returns PI
+console.log(Math.SQRT2);    // returns the square root of 2
+console.log(Math.SQRT1_2);  // returns the square root of 1/2
+console.log(Math.LN2);      // returns the natural logarithm of 2
+console.log(Math.LN10);     // returns the natural logarithm of 10
+console.log(Math.LOG2E);    // returns base 2 logarithm of E
+console.log(Math.LOG10E);   // returns base 10 logarithm of E
+
+** important **
+
+console.log(Math.round(4.2))	
+console.log(Math.ceil(4.1))	 
+console.log(Math.floor(4.7))	
+console.log(Math.trunc(4.8))	 // Er kaj point er sob cut kore dibe,round value output dibe
+
+console.log(Math.sign(-4));  //returns if x is negative, null or positive
+
+console.log(Math.pow(8, 2));   //power 
+console.log((Math.sqrt(64)));  //root kore
+
+console.log(Math.abs(-4.7));   // abs er kaj negative value dile positive kore dibe 
+
+//Angle in radians = Angle in degrees x PI / 180.
+console.log(Math.sin(90 * Math.PI / 180)); 
+console.log(Math.cos(0 * Math.PI / 180));
+
+//return min value
+console.log(Math.min(0, 150, 30, 20, -8, -200));
+//return max value
+console.log(Math.max(0, 150, 30, 20, -8, -200));
+
+console.log(Math.random()); // 0 theke 1 er modde ekta number dibe
+
+console.log(Math.log(10)); 
+console.log(Math.log2(10)); 
+console.log(Math.log10(10)); 
+
+** Math Random **
+
+// Returns a random integer from 0 to 9
+//  jodi 100 er modde random number pete chay 100 multipali hobe 
+console.log(Math.floor(Math.random() * 10));
+
+// Proper Random Function
+//JavaScript function always returns a random number between min (included) and max (excluded)
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min) ) + min;
+}
+// JavaScript function always returns a random number between min and max (both included)
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+
+
+
+
+
+
+
+*** Math Object Methods and Properties ***
+
+Name       	Description
+abs(x)	Returns the absolute value of x
+acos(x)	Returns the arccosine of x, in radians
+acosh(x)	Returns the hyperbolic arccosine of x
+asin(x)	Returns the arcsine of x, in radians
+asinh(x)	Returns the hyperbolic arcsine of x
+atan(x)	Returns the arctangent of x as a numeric value between -PI/2 and PI/2 radians
+atan2(y, x)	Returns the arctangent of the quotient of its arguments
+atanh(x)	Returns the hyperbolic arctangent of x
+cbrt(x)	Returns the cubic root of x
+ceil(x)	Returns x, rounded upwards to the nearest integer
+clz32(x)	Returns the number of leading zeros in a 32-bit binary representation of x
+cos(x)	Returns the cosine of x (x is in radians)
+cosh(x)	Returns the hyperbolic cosine of x
+E	Returns Euler's number (approx. 2.718)
+exp(x)	Returns the value of Ex
+expm1(x)	Returns the value of Ex minus 1
+floor(x)	Returns x, rounded downwards to the nearest integer
+fround(x)	Returns the nearest (32-bit single precision) float representation of a number
+LN2	Returns the natural logarithm of 2 (approx. 0.693)
+LN10	Returns the natural logarithm of 10 (approx. 2.302)
+log(x)	Returns the natural logarithmof x
+log10(x)	Returns the base-10 logarithm of x
+LOG10E	Returns the base-10 logarithm of E (approx. 0.434)
+log1p(x)	Returns the natural logarithm of 1 + x
+log2(x)	Returns the base-2 logarithm of x
+LOG2E	Returns the base-2 logarithm of E (approx. 1.442)
+max(x1,x2,..)	Returns the number with the highest value
+min(x1,x2,..)	Returns the number with the lowest value
+PI	Returns PI (approx. 3.14)
+pow(x, y)	Returns the value of x to the power of y
+random()	Returns a random number between 0 and 1
+round(x)	Rounds x to the nearest integer
+sign(x)	Returns the sign of a number (checks whether it is positive, negative or zero)
+sin(x)	Returns the sine of x (x is in radians)
+sinh(x)	Returns the hyperbolic sine of x
+sqrt(x)	Returns the square root of x
+SQRT1_2	Returns the square root of 1/2 (approx. 0.707)
+SQRT2	Returns the square root of 2 (approx. 1.414)
+tan(x)	Returns the tangent of an angle
+tanh(x)	Returns the hyperbolic tangent of a number
+trunc(x)	Returns the integer part of a number (x)
