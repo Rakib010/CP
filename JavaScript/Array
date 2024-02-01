@@ -236,7 +236,7 @@ function myFunction(value, index, array){
 console.log(number.find(myFunction)); 
 
 //array from()-> iterable object,
-//creat arrray 
+//creat arrray -> eita use korle jekono value array te creat hobe.
  console.log(Array.from("ABCDEFG"));
 
 //keys() method -> ektu jamela ashe
