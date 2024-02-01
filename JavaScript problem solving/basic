@@ -1,1 +1,69 @@
+// 1.
+function getRandom(min,max){
+  return Math.floor(Math.random()* (max-min+1))+min;  
+}
+const number = getRandom(1,6);
+console.log(number);
 
+// 2.
+
+const students = ["zunayed","lemon","hasan","faruk","saiful","siam","bani"];
+console.log(students.sort());
+
+// 3.
+ 
+const rollNumber = [2,4,6,1,9];
+
+rollNumber.sort(function(a,b){
+    return a-b;
+});
+console.log(rollNumber);
+
+// 4. kono year leap year kina ta ber korte hobe?
+
+ function isLeapYear(year){
+     if((year % 400 === 0) || ((year % 4 === 0) && (year % 100 !==0))) {
+        console.log(`${year} is a leap year!`);
+     } else{
+        console.log(`${year} is not a leap year`);
+     }
+ }
+  isLeapYear(2028)
+ 
+  // 5. kono sentence kotogula vowel ashe ta ber korte hober?
+
+   const vowels = ["a","e","i","o","u","A","E","I","O","U"];
+
+   function countVowels(sentence){
+    let count = 0;
+    const letters = Array.from(sentence);
+
+    letters.forEach(function(value){
+        if(vowels.includes(value)){
+            count++;
+        }
+    });
+
+    return count;
+   }
+   console.log(countVowels("I love Bangladesh"));
+
+   // 6. kono array te duplicate number  gula ki vabe  ber kore anti pari?
+
+   const  numbers = [1,2,3,4,5,5,6,7,7,8];
+    
+   const dup = numbers.filter(function(value,index,array){
+     return array.indexOf(value) !== index;
+
+   });
+   console.log(dup);
+
+   // 7. kono array theke unique namber gula ki vabe ber korte pari?
+
+    const  num = [1,2,3,4,5,5,6,7,7,8];
+    
+   const d = numbers.filter(function(value,index,array){
+     return array.indexOf(value) == index;
+
+   });
+   console.log(d);
