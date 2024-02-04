@@ -10,6 +10,34 @@ values()	 Returns an iterator with all the values in a Set
 Property	 Description
 size	Returns the number of elements in a Set
 
+ //set 
+   
+  const letters = new Set(['a','b','c']);
+
+  letters.add('d');
+  letters.delete('a');
+  console.log(letters);
+
+   //foreach method
+   // Create a Set
+const l = new Set(["a","b","c"]);
+
+letters.forEach (function(value) {
+    return value;
+})
+  console.log(l);
+ 
+// values() Method
+
+const la = new Set(["a","b","c"]);
+
+console.log(letters.values());  
+
+
+
+
+
+
 ** Map Methods** 
 Method	  Description
 new Map() ->	Creates a new Map
@@ -21,3 +49,35 @@ forEach()	->  Calls a function for each key/value pair in a Map
 entries()	->  Returns an iterator with the [key, value] pairs in a Map
 ** Property **	    Description
  size	       Returns the number of elements in a Map
+
+
+
+//Map 
+ // key - apples , vlaue - 500;
+const b = new Map([
+  ["apples", 500],
+  ["bananas", 300],
+  ["oranges", 200]
+]);
+  b.set("lemon",100);
+ console.log(b);
+
+// get method;
+console.log(b.get("bananas"));
+
+//has
+ console.log(b.has("lemon"));
+ 
+ // foreach
+ b.forEach (function(value, key) {
+   return value;
+})
+ console.log(b);
+
+ // entries() Method
+let text = "";
+for (const x of b.entries()) {
+  text += x;
+}
+console.log(text);
+
