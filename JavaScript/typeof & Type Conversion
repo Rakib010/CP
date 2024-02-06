@@ -1,0 +1,77 @@
+/ JavaScript typeof
+
+//number sathe string + korle typeof (string hoy)
+let a = '71';
+let b = 'dhaka';
+
+console.log(typeof (b+a)); //string 
+
+console.log(typeof "John");                 // Returns "string"
+console.log(typeof 3.14);                   // Returns "number"
+console.log(typeof NaN);                    // Returns "number"
+console.log(typeof false);                  // Returns "boolean"
+console.log(typeof [1,2,3,4]);              // Returns "object"
+console.log(typeof {name:'John', age:34});  // Returns "object"
+console.log(typeof new Date());             // Returns "object"
+console.log(typeof function () {});         // Returns "function"
+console.log(typeof myCar);                  // Returns "undefined" *
+console.log(typeof null);                  // returns "object"
+
+
+
+//constructor 
+// constructor hocche -> je function ta create kore constructor ke   
+
+function isArray(myArray){
+   console.log(myArray.constructor.toString().indexOf('Array') > -1);
+}
+ isArray([1,2,3]);
+
+ // ey vabe o check kora jay
+ function isArray(myArray) {
+  console.log(myArray.constructor === Array);
+}
+  isArray([1,2,3]);
+
+ //undefined - typeof undefined
+ //undefined dia onek fast memory empty kora jay
+ //undefined value nai but memory te refarance ashe
+
+//null hocche exist kore na -> typeOf - object 
+let person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+person = null;   // person akhn empty hoye gelo 
+
+//instanceof 
+
+const cars = ["saab","volvo","bmw"];
+
+ console.log(cars instanceof Array);
+ console.log(cars instanceof Object);
+ console.log(cars instanceof String);
+ console.log(cars instanceof Number);
+
+
+ // Type Conversion
+
+ //Converting Strings to Numbers
+ const x = "3.11";
+ const y = "";
+ const z = "john";
+ console.log(Number(x));
+ console.log(Number(y)); //return 0 
+ console.log(Number(z));  // NaN(not a number)
+ console.log(parseFloat(x)); // return float value
+ console.log(parseInt(x));  // return integer value
+
+ //Converting Numbers to Strings
+   console.log(String(x)); 
+   console.log(String(z));  // console string value white color hoy
+  
+//Converting Dates to Numbers
+
+//Converting Booleans to Number
+ console.log(Number(true)); //return 1
+ console.log(Number(false)); //return 0
+
+ //Converting Booleans to Strings
+  console.log(String(true)); 
