@@ -1,0 +1,107 @@
+
+  ** Scop ** 
+
+  //Variables declared inside a { } block cannot be accessed from outside the block
+  {
+  let x = 2;
+  }
+  //Local variables have Function Scope
+  //  They can only be accessed from within the function.
+  //Local variables are created when a function starts, and deleted when the function is completed
+  // function er vitore variable declared korle oita r fuction er bhaire kaj kore
+  // tobe same name die alada alada function e same namer variable declared korte parbo
+  function myFunction() {
+    let carName = "Volvo";
+    // code here CAN use carName
+  }
+
+  //Global JavaScript Variables
+  //A variable declared outside a function, becomes GLOBAL.
+  let carName = "Volvo";
+// code here can use carName
+function myFunction() {
+// code here can also use carName
+}
+// A global variable has Global Scope:
+// All scripts and functions on a web page can access it. 
+//In JavaScript, objects and functions are also variables.
+ 
+//Automatically Global
+//If you assign a value to a variable that has not been declared, it will automatically become a GLOBAL variable.
+ // keyword er name na die variable declared kori 
+ // tahole eita Automatically Global variable dore nibe js
+
+// code here can use carName
+function myFunction() {
+  carName = "Volvo";
+}
+myFunction();
+  
+//window object -> this is bulti function in js
+// let use kora jay na window object e 
+ 
+//JavaScript Hoisting
+// js e ey vabe aghe value assign kore last variable declared korle
+// kaj korbe bcz se first pura code dekhe sure hoye nei konta aghe konta pore hobe  
+// only var keyword e eita hoy 
+
+x = 5; // Assign 5 to x
+elem = document.getElementById("demo"); // Find an element
+elem.innerHTML = x;                     // Display x in the element
+var x; // Declare x
+ 
+// let & conts not hoisting 
+// tobe hoisting hoy but jkhn js code te pore tokhn var smy jei ekta varible er jonno memory te
+// undefind kore jayga nei, but let & conts jayga nei na tai eita tkhn kaj kore na ReferenceError dekhai
+// thokn er smy ta ke tamporaly dead jone thake  bole 
+
+/* Variables defined with let and const are hoisted to the top of the block, but not initialized.
+Meaning: The block of code is aware of the variable, but it cannot be used until it has been declared.
+Using a let variable before it is declared will result in a ReferenceError.
+The variable is in a "temporal dead zone" from the start of the block until it is declared */
+ 
+
+//Using a const variable before it is declared, is a syntax error, so the code will simply not run
+// r ekta kotha  conts ek line variable declared kore assign korte hoy tachara it's not working 
+carName = "Volvo";
+const carName; //This code will not run.
+   
+ ** JavaScript Use Strict ** 
+
+ ** This keyword ** 
+
+// this hocche ekta object ke remove korte parbe. amra bole dile hobe.
+// aber auto se buje nibe
+const person = {
+  firstName: "John",
+  lastName : "Doe",
+  id       : 5566,
+  fullName : function() {
+    return this.firstName + " " + this.lastName;
+  },
+  getFullname: function(){
+    return this.fullName();
+  }
+};
+ console.log(person.getFullname());
+  
+// Explicit Function Binding
+// this ta hocche person  ke mean kore but jodi amra thik kore bole dei
+// person ke mean na  kore onno ekta object ke mean korete thkhn seta bole Explicit Function Binding
+// dot er aghe jei object thakbe seita this mone korbe.   
+const person1 = {
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+}
+const person2 = {
+  firstName:"John",
+  lastName: "Doe",
+}
+// this function automatic dore nibe this ta hocche person1 but
+// amra jodi spacife vabe bole dei tahole call() function call dite hobe.
+person1.fullName.call(person2);
+
+
+
+
