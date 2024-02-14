@@ -1,1 +1,119 @@
+//kono sentence e sumit word ta koy ber ashe ? & first sumit name ta koy number postion ashe?
 
+  const text = "Learn with Sumit is all about teaching web development skills and techniques.sumit has a apple laptop sumit also has pc.";
+
+  const match = text.match(/sumit/gi);
+  let num;
+  if(match){
+    num = match.length;
+  } else{
+    num  = 0;
+  }
+  console.log(match);
+
+ let postion = text.search(/sumit/i);
+ if(postion >= 0){
+  postion = postion;
+ } else{
+   postion = "not found";
+ }
+  console.log(postion);
+
+  // input : linearSearch(['a','b','c','d','c'], 'c')
+  // output : "c" index ->  2 or 'not found!'
+  // problem: linearSearch() function ti implemnt kore dekho 
+
+   function linearSearch(arr, val){
+     const n = arr.length;
+      for (let i = 0; i < n; i++){
+        if(arr[i] === val){
+          return i;
+        } 
+      }
+      return "Not found!";
+   }
+ 
+ let result = linearSearch(['a','b','c','d','c'], 'g');
+ console.log(result); 
+
+//Kono array theke ki vabe sob theke boro string number khuje ber korben & index number dekhaben?
+
+function longestString(arr){
+    let longword  = " ";
+
+    for(x of arr){
+      if( x.length > longword.length){
+        longword = x;
+      }
+    }
+    return[longword, arr.indexOf(longword)];
+    
+}
+ const ans = longestString(['Rakib','dada','sumit','sagor sir ','rocky','siam']);
+ console.log(ans); 
+
+ // 1-100 number er moodde kon number gulo 3, 5, & 3 o 5 2ta number dara divisible ta ber koron.
+ 
+ function divisible(number){
+   for(let i = 1; i <= number; i++){
+      if(i % 15 === 0){
+        console.log(`${i} 2 ta number dara`);
+      }
+      else if(i % 3 === 0){
+        console.log(`${i} three dara`);
+      }
+      else if(i % 5 === 0){
+        console.log(`${i} five dara`);
+      }
+      else{
+        console.log(i);
+      }
+   }
+ }
+
+ divisible(100); 
+
+ // Array theke falsy value kivabe khuje bad dite pari?
+  
+  const mixArr = ["lws",undefined,"sumit",false,"","apple",40,"k",true,"thanks",NaN];
+   
+  const arr = mixArr.filter(function(value){
+    if(value){
+      return true;
+    } else{
+      return false;
+    }
+  });
+   console.log(arr);
+
+
+   const another = mixArr.filter(Boolean); 
+   console.log(another);
+
+
+ // object theke falsy value kivabe khuje bad dite pari?
+
+ const obj = {
+       a : "name",
+       b : undefined,
+       c : "sumit",
+       d : false,
+       e : "",
+       f : "apple",
+       g : 40,
+       h : true,
+       i : "thanks",
+       j : NaN,
+ };
+
+ const object = function(obj){
+    for(let i in obj){
+       if(!obj[i]){
+        delete obj[i];
+       }
+    }
+    return obj;
+ }
+ console.log(object(obj));
+
+    
