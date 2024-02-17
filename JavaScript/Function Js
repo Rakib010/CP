@@ -1,1 +1,288 @@
+ ** function **
+
+//function Expressions
+// variable declard kore function likha jay
+// ey function ke anonymous function bole, 
+// jei function er name nai(variable er modde rekha hoy) takhe bole anonymous function 
+ const a = function(){
+  console.log("Hello");
+ }
+  a();
+
+//Function Hoisting
+//Hoisting is JavaScript's default behavior of moving declarations to the top of the current scope.
+// hoisting smy sodo variable upore uthe na function declaration o upore uthe jay
+// like below code
+myFunction(5);
+function myFunction(y) {
+  return y * y;
+}
+// function Expressions  hoisting hoy na 
+//Functions defined using an expression are not hoisted.
+const b = function(){
+  console.log("Hello");
+ }
+  a();
+
+//Self-Invoking Functions 
+// nije nije ke call kore ta takhe invoking function bole
+(function(){
+  console.log("Hello");
+})();
+
+//function jodi kisu return na kore tokhn defult undefind hobe
+//Functions Can Be Used as Values
+// ey function e jokhn value return korse tokhn(4*3 = 12) return kora
+// result ta (x variable) jaya joma hobe eita hocche Functions Can Be Used as Values.
+function myFunction(a, b) {
+  return a * b;
+}
+let x = myFunction(4, 3);
+
+//Functions are Objects
+// we know that object er properties & methods thake 
+// function er o properties & methods thake tai Functions are Objects
+// typeof checke korle dekha jay function return fuction but function ekta object
+
+function myFunction(a, b) {
+}
+// dir use dekha jay 
+ console.dir(myFunction);
+ 
+ // arguments hocche array
+ // arguments use kore arguments length ber kora jay
+ function myFunction(a, b) {
+  return arguments.length;
+}
+ 
+// toSting() method use korle eita string hobe
+ function myFunction(a, b) {
+  return a * b;
+}
+let text = myFunction.toString();
+console.log(text);
+
+// kono function ke object er properties hiseb use kora hole tokhn eitake method bola hoy.
+const y = {
+   fName : 'sumit',
+   sleep : function(){
+
+   }
+}
+
+//Arrow Functions (ES5)
+let aa = function(x, y) {
+  return x * y;
+}
+// Arrow Functions (ES6)
+ const fun = (x,y) => x * y; 
+ 
+ //Arrow functions are not hoisted
+ //Arrow Functions kono this use kora jay na 
+ // normal function e this kora jay
+ const object = {
+  a : 5,
+  b : function(){
+    console.log(this.a);
+  }
+}
+ // kono object er properties hisbe function defind kora lagbe tokhn arrow function kaj korbe na 
+ // it's not working cuz this ka ke point korbe bujte parbe na
+ // this korle golbal window object ke denot kore
+ const obj = {
+  a : 5,
+  b : () => {
+    console.log(this.a);
+  }
+}
+
+// JavaScript Function Parameters
+
+function z(x,y){ // (x,y hocche pera metar)
+  return x * y;
+}
+ z(3,4); // eita hocche arguments 
+
+
+ //Parameter Rules
+ function definitions do not specify data types for parameters.
+ // x("dada",5)-> ami parameters e ja mon chay tai pathe parbo string, array etc...
+ functions do not perform type checking on the passed arguments.
+ functions do not check the number of arguments received.
+// x(4,5,6,8) -> jeto mon chay argument pathate parbo functione jei koyta parametar ashe se seikoita argument nibe
+
+// Default Parameters
+// parameter e ekta value pass kors tokhn print korbe (Nan), y value = undefind 
+function z(x,y){ 
+  return x * y;
+}
+ z(3);
+// parameter e value declard kore dite parbo
+function z(x,y=4){ 
+  return x * y;
+}
+ z(3);
+
+ // Find maximum value
+  
+  function max(){
+     let m = -Infinity;
+     for(let i = 0; i< arguments.length; i++){
+      if(arguments[i]>m){
+        m = arguments[i] ;
+      }
+     }
+     return m;
+  }
+  console.log(max(1,123,500,115,44,8));
+  
+  // sum all value
+  function sumAllvalue(){
+    let sum = 0;
+    for(let i = 0; i< arguments.length; i++){
+       sum = arguments[i] + sum;
+      }
+      return sum;
+  }
+  console.log(sumAllvalue(1,123,500,115,44,8));
+
+  //Arguments are Passed by Value
+  // function scop e change korle, function er bhaire change  hobe na 
+  // cuz value pass kora hoyse, argumenter location na  
+  function a(x, y){ 
+    x = x * 5;
+   return x * y;
+ }
+  let e = 5;
+  let f = 6;
+
+console.log(a(e, f));
+console.log(e);
+
+  // Objects are Passed by Reference
+  // object ke parametar pathale,function er viotor sei value change korle function er bhaire o change hoye jay so Objects are Passed by Reference
+  function a(x){ 
+     x.one = 7
+    return x.one * x.two;
+  }
+ let  m = {
+   one : 4,
+   two : 5
+ };
+ 
+ console.log(a(m));
+ console.log(m); 
+
+ //JavaScript Function Invocation
+
+ //JavaScript Function call()
+
+ //call() Method
+
+ const person = {
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+}
+const person1 = {
+  firstName:"John",
+  lastName: "Doe"
+}
+const person2 = {
+  firstName:"Mary",
+  lastName: "Doe"
+}
+// call mathod use kora hoyese & call er parametare bola 
+// dewa hoise this kon dorbo, amra chile this person2 ke dorte parbo
+person.fullName.call(person1);
+
+//The call() Method with Arguments
+const personn = {
+  fullName: function(city, country) {
+    return this.firstName + " " + this.lastName + "," + city + "," + country;
+  }
+}
+const personn1 = {
+  firstName:"John",
+  lastName: "Doe"
+}
+// first paramater ke this mone korbe & bakigula city r country dore nibe
+personn.fullName.call(personn1, "Oslo", "Norway");
+
+
+//JavaScript Function apply()
+//The call() method takes arguments separately.
+//The apply() method takes arguments as an array.
+//apply method & call method ektai deffernt 
+
+const personnn = {
+  fullName: function(city, country) {
+    return this.firstName + " " + this.lastName + "," + city + "," + country;
+  }
+}
+const person3 = {
+  firstName:"John",
+  lastName: "Doe"
+}
+//apply method e array pass kora jay 
+personnn.fullName.apply(person3, ["Oslo", "Norway"]);
+
+// Max Method on Arrays
+// this er jayay null hoyse cuz this er dorkar nai eykhane
+// null na die (""),0 use korte pari
+console.log(Math.max.apply(null, [1,2,3])); 
+
+
+//JavaScript Closures
+
+// a is a global variable
+let a = 4;
+function myFunction() {
+  return a * a;
+}
+ // akhn a hocche local variable eita sodo function  er vitore kaj korbe 
+function myFunction() {
+  let a = 4;
+  return a * a;
+}
+//A Counter Dilemma
+//The counter should now be 3. But it is 1.
+// tai ey problem ta slove korte amder nested function lagbe
+function add() {
+  let counter = 0;
+  counter += 1;
+  return counter;
+}
+// Call add() 3 times
+add();
+add();
+add();
+
+//JavaScript Nested Functions 
+
+function add(){
+  let counter = 0;
+  
+  function plus(){
+    counter +=1;
+  }
+  plus();
+
+  return counter;
+}
+
+// JavaScript Closures
+//ক্লোজার হল এমন একটি ফাংশন যার প্যারেন্ট স্কোপে অ্যাক্সেস থাকে, এমনকি প্যারেন্ট ফাংশন বন্ধ হওয়ার পরেও।
+function temp(){
+  let counter = 0;
+  return function (){
+    counter +=1;
+  }
+}
+// add varibale akhn ekta function hoye gese
+// bcz temp function thke amra pura ekta function return
+// korsi so tokhn add varibale function hoye jabe
+const add = temp(); 
+add();
+add(); 
 
