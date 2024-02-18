@@ -253,6 +253,31 @@ new Function()  // A new Function object
 new Date()     // A new Date object 
 
 
+//JavaScript Object Prototypes
+
+function Person(first, last, age) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.fullname = function(){
+    return this.firstName + " " + this.lastName;
+  }
+}
+const sumit = new Person('junior','dada', 50);
+const jasim = new Person('jasim','uddin', 40);
+const rahim = new Person('Rahim','Islam', 20);
+
+// direct  constructors(Person) proparti hisebe e add kori jay tai biday
+// prototype er vitor die disi. r ey (prototype sobi inherit korte pare)
+Person.prototype.city = 'Dhaka';
+
+console.dir(Person);
+
+console.log(sumit.city);
+
+// prototype vitor kono kisu rakhle sob object, method die acces kora jabe 
+// like above code 
+
 
 
 
