@@ -237,9 +237,9 @@ sumit.city = 'dhaka' //Adding a Method to an Object
 console.log(sumit);
 
 //Adding a Property to a Constructor
- // buleprint fixed - ey jaygay r kono change kora jabe na 
+ // buleprint fixed - Constructors function e new objct add kora jabe na ( like - Person.country )
  // so amra jei object create kori ta nijer moto kore make kora jabe 
- // object chayle add korte parbo like- (sumit.city above code);
+ // person ke bebohar kore jei objcet create korbo sei object e value add kora jabe - (sumit.city above code);
 
 //Built-in JavaScript Constructors
 // Capital letter jei String use kori ta hocche Constructors function
