@@ -1,4 +1,4 @@
- ** Object Js **
+ ** basic **
 
   let car = {
     name:"Fiat",
@@ -20,3 +20,250 @@
   let b = new String("Rakib");
   console.log(a);
   console.log(b);
+
+** JS Objects ** 
+
+//JavaScript Primitives
+//A primitive value is a value that has no properties or methods.
+// String, number, boolean, null, undefined, symbol, bigint.
+
+const person = {
+  name: "bro",
+  agge: 34,
+};
+person.name = "junior";
+
+// Primitive values are immutable (they are hardcoded and cannot be changed).
+let nummber = 3;
+let number = 4;  
+
+//JavaScript Object Properties
+
+//JavaScript for in Loop
+// for in loop js  object er properter modde die jete pare
+
+const person = {
+  fname: " John",
+  lname: " Doe",
+  age: 25
+};
+
+let txt = '';
+for (let x in person) {
+   txt = txt + person[x];
+}
+console.log(txt);
+
+//Adding New Properties
+ person.city = "Dhaka";
+ console.log(person);
+
+//Deleting Properties
+ delete person.city;
+ console.log(person);
+
+// Nested Objects
+
+ const myObj  = {
+  name:"John",
+  age:30,
+  cars: {
+    car1:"Ford",
+    car2:"BMW",
+    car3:"Fiat"
+  }
+}
+let x = myObj.cars;
+console.log(x);
+
+//Nested Arrays and Objects
+
+const Obj = {
+  name: "John",
+  age: 30,
+  cars: [
+    {name:"Ford", models:["Fiesta", "Focus", "Mustang"]},
+    {name:"BMW", models:["320", "X3", "X5"]},
+    {name:"Fiat", models:["500", "Panda"]}
+  ]
+}
+let y = '';
+let z = ''; 
+for (let i in Obj.cars) {
+   y = y + Obj.cars[i].name;
+
+   for (let j in Obj.cars[i].models) {
+    z += Obj.cars[i].models[j];
+  }
+}
+
+console.log(y);
+console.log(z);
+
+//JavaScript Object Methods
+
+// this hocche person ta so nije call korle person bola lagbe na this bole se bujbee. 
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  id: 5566,
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+
+// Accessing Object Methods
+// property- fullname & method - function ta 
+console.log(person.fullName());
+
+//Adding a Method to an Object
+//  ey vabe method add kora jay
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  id: 5566,
+};
+person.fullName = function() {
+  return this.firstName + " " + this.lastName;
+} 
+
+
+//JavaScript Display Objects
+
+// ey vabe html e object print korle output [object likha ta pabo]
+// bcz html object er properti gula print korte hole
+// Properties by name dore, in a Loop, Object.values(),  JSON.stringify() ey gula die korte parbo
+
+const person = {
+  name: "John",
+  age: 30,
+  city: "New York"
+};
+document.getElementById("demo").innerHTML = person;
+//Ey vabe korle personn er sob property html output dekhabe
+const personn = {
+  name: "John",
+  age: 30,
+  city: "New York"
+};
+let txt = "";
+for (let x in personn) {
+txt += personn[x] + " ";
+};
+
+document.getElementById("demo").innerHTML = txt;
+
+// Using Object.values()
+// Any JavaScript object can be converted to an array using Object.values()
+const persoon = {
+  name: "John",
+  age: 30,
+  city: "New York"
+};
+const myArray = Object.values(persoon);
+ for(x of myArray){
+  console.log(x);
+ }
+ //Using JSON.stringify()
+ //Any JavaScript object can be stringified (converted to a string) 
+ // with the JavaScript function JSON.stringify()
+//Stringify Dates,
+//Stringify Functions
+//JSON.stringify will not stringify functions
+const per = {
+  name: "John",
+  age: function () {return 30;}
+};
+console.log(per);
+// aghe toSrting die convert kore nite hobe
+const pe = {
+  name: "John",
+  age: function () {return 30;}
+};
+person.age = person.age.toString(); 
+
+//JavaScript Object Accessors
+
+// kono object er property die access korte hoy tar valu dekhar jonno ba pawar jonno
+// Accessors hocche upor kajta, jar madome korte parbo(keyword die)
+// ey 2ta keyword -> Getters and setters
+
+// why need those method?
+//It gives simpler syntax
+//It allows equal syntax for properties and methods
+//It can secure better data quality
+//It is useful for doing things behind-the-scenes
+
+// Create an object: Getters 
+const personMan = {
+  firstName: "John",
+  lastName: "Doe",
+  language: "en",
+  get lang() {
+    return this.language;
+  }
+};
+console.log(personMan.lang);
+
+//Setters
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  language: "",
+  set lan(lan) {
+    this.language = lan.toUpperCase();
+  }
+};
+// Set an object property using a setter:
+person.lan = "en";
+console.log(person);*/
+
+//JavaScript Object Constructors
+ // Blueprints mani hocche template 
+//Constructors function capital letter  die likhte hoy
+function Person(first, last, age) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.fullname = function(){
+    return this.firstName + " " + this.lastName;
+  }
+}
+ //bjects of the same type are created by calling the constructor function with the new keyword
+const sumit = new Person('junior','dada', 50);
+const jasim = new Person('jasim','uddin', 40);
+const rahim = new Person('Rahim','Islam', 20);
+sumit.city = 'dhaka' //Adding a Method to an Object
+console.log(sumit);
+
+//Adding a Property to a Constructor
+ // buleprint fixed - ey jaygay r kono change kora jabe na 
+ // so amra jei object create kori ta nijer moto kore make kora jabe 
+ // object chayle add korte parbo like- (sumit.city above code);
+
+//Built-in JavaScript Constructors
+// Capital letter jei String use kori ta hocche Constructors function
+new String()    // A new String object
+new Number()    // A new Number object
+new Boolean()   // A new Boolean object
+new Object()    // A new Object object
+new Array()     // A new Array object
+new RegExp()    // A new RegExp object
+new Function()  // A new Function object
+new Date()     // A new Date object 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
