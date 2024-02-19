@@ -279,6 +279,38 @@ console.log(sumit.city);
 // like above code 
 
 
+// JavaScript Iterables (Array,string)
+
+ const person = {
+   one : 1,
+   two : 2,
+   three : 3
+};
+ const num = [1,2,3,4,5];
+console.dir(person);
+console.dir(num); 
+
+
+ const myNumber = {};
+// make it iterable
+myNumber[Symbol.iterator] = function () {
+  let n = 0;
+  let done = false;
+  return {
+    next() {
+      n += 10;
+      if (n == 100) { done = ture}
+      return {
+        value: n,
+        done: done,
+      };
+    },
+  };
+};
+
+ for(let num of myNumber){
+   console.log(num);
+ } 
 
 
 
