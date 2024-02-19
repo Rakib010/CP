@@ -310,8 +310,107 @@ myNumber[Symbol.iterator] = function () {
 
  for(let num of myNumber){
    console.log(num);
- } 
+ }
 
+
+ **  JavaScript Sets(datatype)  **
+
+ // A JavaScript Set is a collection of unique values.
+
+ // Create a Set
+const letters = new Set(["a","b","c"]);
+
+console.log(letters);
+// another way create a set
+const letter = new Set();
+// Add Values to the Set
+letter.add("a");
+letter.add("b");
+letter.add("c");
+
+//The values() Method -Returns [object Set Iterator]
+
+const createSet = new set (['a', 'b','c']);
+
+const setIterator = createSet.values();
+
+for(let a of setIterator){
+  console.log(a);
+}
+
+//The keys() Method
+//A Set has no keys. keys() returns the same as values().
+
+
+//The entries() Method
+  // entries () return kore [key,value]pairs. but Set has no keys.
+  // entries() returns [value,value] pairs
+  const a = {
+    fName : 'dada',
+    lName : 'vai'
+  };
+  console.log(Object.entries(a));
+
+  //Sets are Objects
+  const creatSet = new set (['a', 'b','c']);
+
+  console.log(typeof creatSet); /
+
+  // ekta jinis set kina sei check korte ey function use kora hoy
+  // set hoile ture asbe,else false asbe 
+  console.log(creatSet instanceof Set) 
+
+ **  JavaScript Maps ** 
+
+A Map holds key-value pairs where the keys can be any datatype.
+A Map remembers the original insertion order of the keys.
+A Map has a property that represents the size of the map. 
+const person = {
+   // fname hocche - key(key r datatype can be  any datatype)
+   // dada hocche - value
+  fName : 'dada',
+  lName : 'vai'
+};
+
+// Create a Map
+const fruits = new Map([
+  ["apples", 500],
+  ["bananas", 300],
+  ["oranges", 200]
+]);
+
+//another way 
+// Create a Map
+const fruit = new Map();
+// Set Map Values
+fruit.set("apples", 500);
+fruit.set("bananas", 300);
+
+//Map.get()
+// key name die sarch dile value ta pawa jay
+fruits.get("apples");    // Returns 500
+
+//Map.size
+fruits.size; 
+
+//Map.delete()
+fruits.delete("apples");
+
+//Map.clear()
+//The clear() method removes all the elements from a Map
+fruits.clear();
+
+//Map.has()
+//The has() method returns true if a key exists in a Map
+fruits.has("apples");
+
+//Maps are Objects
+// Returns object:
+typeof fruits;
+
+//instanceof Map returns true:
+// Returns true:
+fruits instanceof Map;
 
 
 
