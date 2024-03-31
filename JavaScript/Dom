@@ -1,1 +1,153 @@
+ POEM - propertis Objects Events Methods 
+ <p id="demo"></p> 
+ attribute - id ,class.
+ 
+
+ // DOM Methods
+ const p = document.getElementById("demo");
+ p.innerHTML =`Today's data is : ${Date()}`;
+
+ function validateFrom(){
+    const form = document.forms['myForm'];
+    const value = form['fname'].value;
+    if(value === ''){
+        alert("you must type name");
+        return false
+    }
+ }
+
+ //set timeout function dile korle buja jay je aghe css kaj hocche than js.
+ function change(){
+    const s = document.querySelector('#yep');
+ s.style.color = 'blue';
+ s.style.fontSize = "50px";
+ } 
+
+ function myMove(){
+    const animate = document.getElementById("animate");
+    let pos = 0;
+   const interval =  setInterval(frame, 5);
+     function frame(){
+        if(pos < 350){
+            pos++;
+        animate.style.top = pos + 'px';
+        animate.style.left = pos + 'px';
+        } else{
+            clearInterval(interval);
+        }   
+      }
+ }
+
+ function changeText(){
+    const title = document.getElementById("title");
+     title.innerHTML = "Hello";
+ }
+
+ function displayDate(){
+    const a = document.getElementById("date");
+    a.innerHTML = Date();
+ }
+
+const  button = document.getElementById("btn");
+ button.onclick = function(){
+    console.log("Hello");
+ }
+
+ function upperCase(){
+    const upper = document.getElementById("up");
+    upper.value = upper.value.toUppercase();
+ }
+
+ function mOver(obj){
+    obj.innerHTML = "Thanks";
+ }
+function mOut(obj){
+    obj.innerHTML = "Hovar me";
+}
+
+function mDown(sub){
+    sub.style.backgroundColor = 'yellow';
+    sub.innerHTML = "Charo";
+}
+function mUp(sub){
+    sub.style.backgroundColor = 'blue';
+    sub.innerHTML= "thanks";
+}
+
+//Add Many Event Handlers to the Same Element
+function myFunction(){
+   console.log("Hello")
+}
+const yeap = document.getElementById('bu');
+yeap.addEventListener('click', function(){
+   console.log("Hello");
+});
+yeap.addEventListener('mouseover', function(){
+   console.log("Over Me");
+
+});
+
+//Passing Parameters
+function meFunction(text){
+   console.log(text)
+}
+const ye = document.getElementById("ba");
+ye.addEventListener("click",function(){
+    meFunction("Hello babu");
+});   
+
+//Event Bubbling or Event Capturing?
+// bubbling kaj hocche button aghe print hobe than div er kaj.
+ function mFunction(text){
+   console.log(text);
+ }
+const boxB = document.getElementById("boxButton");
+const boxA = document.getElementById("boxDiv");
+
+boxB.addEventListener('click', function(){
+   mFunction("button");
+});
+boxA.addEventListener('click', function(){
+   mFunction("div");
+});
+
+//Navigating Between Nodes,Child Nodes and Node Values
+const p = document.getElementById('demo');
+
+const way1 = p.innerHTML;
+const way2 = p.firstChild.nodeValue;
+const way3 = p.childNodes[0].nodeValue;
+
+console.log(way1); 
+
+const para = document.createElement("p"); // create p tag
+const node = document.createTextNode("Hello World");
+
+para.appendChild(node); // <p> hello world </p>
+
+const element = document.getElementById("div1");
+element.appendChild(para);
+
+// any tag er aghe pore set korer jonno insertBefore method
+const par = document.createElement("p"); // create p tag
+const nod = document.createTextNode("Hello World");
+
+para.appendChild(node); // <p> hello world </p>
+
+const elemen = document.getElementById("div1");
+const p = document.getElementById("p1");
+
+element.insertBefore(par,p1)
+ 
+// Removing Existing HTML Elements
+
+const a = document.getElementById('p1');
+a.remove()
+
+//Removing a Child Node
+
+const div1 = document.getElementById('div1');
+const b = document.getElementById('p2');
+
+div1.removeChild(p2);
 
