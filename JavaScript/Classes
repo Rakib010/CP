@@ -1,1 +1,71 @@
+//JavaScript Classes
+
+ class person{
+  constructor(name,age){
+    this.name = name;
+    this.age = age;
+  }
+ //Class Methods
+  play(){
+    console.log(`${this.name} is playing`);
+  }
+}
+const person1 = new person("Sakib",35);
+const person2 = new person("Tamim",45);
+person1.play();
+person2.play(); 
+
+
+class Car {
+  constructor(name, year) {
+    this.name = name;
+    this.year = year;
+  }
+  run(speed){
+     console.log(this.name + 'is running in ' + speed);
+  }
+}
+ const bmw = new Car('BMW',1999);
+ const audi = new Car('Audi',2000);
+
+ audi.run('100 km per hour'); 
+
+ //JavaScript Class Inheritance
+
+  class Car {
+     constructor(brand){
+      this.carname = brand;
+     }
+     present(){
+       return 'i have a ' + this.carname;
+     }
+  }
+  class Model extends Car{
+    constructor(brand,mod){
+      // parent constructor call korte super use kora hoyese
+      super(brand);
+      this.Model = mod;
+    }
+    show(){
+      return this.present() + 'it is a ' + this.Model;
+    }
+  }
+
+  let myCar = new Model('ford','Mustang');
+  console.log(myCar.show()); 
+
+  class Car {
+    constructor(brand) {
+      this.carname = brand;
+    }
+    get cnam() {
+      return this.carname;
+    }
+    set cnam(x) {
+      this.carname = x;
+    }
+  }
+  const myCar = new Car("Ford");
+  console.log(myCar.carname) 
+
 
