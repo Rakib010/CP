@@ -1,1 +1,90 @@
+       ***JavaScript Callbacks***
+    * A callback is a function passed as an argument to another function
+    * callback hocche emn ekta function jeta r ekta function er perameter hisabe dewa jay
+   
+    function display(some) {
+     console.log(some);
+  }
+  function Calculator(num1, num2) {
+    let sum = num1 + num2;
+    return sum;
+  }
+  let result = Calculator(5, 5);
+  display(result);
+ 
+  // callback function using 
+  function display(some) {
+    console.log(some);
+ }
+ function Calculator(num1, num2, callback) {
+   let sum = num1 + num2;
+   callback(sum);
+ }
+ //Displaye is a called a callback function.
+   Calculator(5, 5,display); 
+ 
+
+//Asynchronous JavaScript
+ // setTimeout ekta buildin function, eitar 2 perametar pass korte hoy.
+
+ console.log('line 1');
+setTimeout(function(){
+   console.log('line 2');
+},1000);
+  console.log('line 3');
+  
+  // above & this code same just write another way
+  // using callback
+  setTimeout(mFunction, 3000);
+  function mFunction() {
+    console.log('dada bhai');
+  }
+  //setInterval()
+  //timer count down kore,
+  setInterval(myFunction, 1000);
+  function myFunction() {
+    console.log("Hae bhai");
+  } 
+
+// callback pattern
+ const paymentSuccess = true;
+ const marks = 70;
+
+ function enroll(callback){
+   console.log('Course enrollment is in progress.');
+
+   setTimeout(function(){
+    if(paymentSuccess){
+      callback();
+    } else{
+       console.log('payment failed');
+    }
+   },2000);
+ }
+
+function progress(callback){
+  console.log('Course on progresss...');
+
+  setTimeout(function(){
+    if(marks >= 80){
+      callback();
+    } else{
+       console.log(' pai ba certificate');
+    }
+  },3000);
+}
+
+function getCertificate(){
+   console.log('Preparing your certificate');
+
+ setTimeout(function(){
+  console.log('paisi certificate');
+ },1000)
+
+}
+
+enroll(progress);
+progress();
+getCertificate(); 
+
 
