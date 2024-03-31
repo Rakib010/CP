@@ -151,3 +151,112 @@ const b = document.getElementById('p2');
 
 div1.removeChild(p2);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ** HTML **
+
+
+ <p id="demo">test</p>
+
+   <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+    Name: <input type="text" name="fname">
+    <input type="submit" value="Submit">
+    </form>
+    
+    <h1 id="yep">Hello world</h1>
+    <button onclick="change()">change now</button>
+      
+
+    <div id="container">
+        <div id="animate"></div>
+    </div>
+    <button onclick="myMove()">Animate</button>
+
+     
+    Same 3 vabe kora jay
+    <h1 id="title" onclick="changeText()">Click on this text!</h1>
+    <h1 id="title" onclick="this.innerHTML = 'Hello' ">Click on this text!</h1>
+    
+
+    <button onclick="displayDate()">click</button>
+    <p id="date"></p>
+   
+    <button id="btn">Click</button>
+
+    <input type="text" id="up" onchange="upperCase()" >
+
+     <div id="randomText"onmouseover = "mOver(this)" onmouseout = "mOut(this)"></div>
+     
+     <div class="div"onmousedown="mDown(this)" onmouseup="mUp(this)"></div>
+ 
+     <button onclick="myFunction()">click me</button>
+      
+     <button id="bu">Click me</button>
+     
+     <button id="ba">Click me</button> 
+
+     <div class="boxDiv">
+        <button id="boxButton">Click</button>
+     </div>
+
+     <p id="demo">Hello</p> 
+
+     <div id="div1">
+        <p id="p1">This is a paragraph.</p>
+        <p id="p2">This is another paragraph.</p>
+      </div>
+
+
+
+
+** CSS ** 
+#yep{
+    color: red;
+    font-size: 30px;
+    
+}
+
+#container{
+  margin-top: 50px;
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: yellow;
+}
+#animate{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background: red;
+}
+button{
+    margin-top: 10px;
+}
+
+#randomText{
+    margin: 50px 0;
+    background: rgb(173, 67, 67);
+    width: 200px;
+    height: 100px;
+    font-size: 40px;
+    font-weight: bold;
+}
+.div{
+    width: 100px;
+    height: 60px;
+    background: red;
+}
