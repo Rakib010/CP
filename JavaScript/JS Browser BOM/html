@@ -1,1 +1,101 @@
+ <!--Window Object 
 
+    <div id="width"></div>
+    <div id="height"></div>
+    <div>
+        <input type="button" value="Open window" onclick="openWindow()">
+    </div>
+    <div>
+        <input type="button" value="Close window" onclick="closeWindow()">
+    </div> -->
+
+    <!--Window Screen
+
+     <div id="width"></div>
+     <div id="height"></div>
+     <div id="availWidth"></div>
+     <div id="availHeight"></div>
+     <div id="colorDepth"></div>
+     <div id="pixelDepth"></div>  -->
+
+    <!-- Window Location -->
+
+    <!--Window History 
+     <div>
+        <input type="button" value="Back" onclick="goBack()">
+     </div>
+     <div>
+        <input type="button" value="Forward" onclick="goForward()">
+     </div> -->
+
+    <!-- Window Navigator -->
+
+    <!--JavaScript Popup Boxes
+      
+     <div id="confirm"></div>
+     <div id="prompt"></div>
+     <div>
+        <input type="button" value="Show alert" onclick="showAlert()">
+     </div>
+     <div>
+        <input type="button" value="Show confirm" onclick="showConfirm()">
+     </div>
+     <div>
+        <input type="button" value="Show prompt" onclick="showPrompt()">
+     </div> -->
+
+    <!--JavaScript Timing Events
+      
+     <div id="timeout"></div>
+     <div id="interval"></div>
+
+     <div>
+        <input type="button" value="Start timeout" onclick="startTimeout()">
+     </div>
+     <div>
+        <input type="button" value="Stop timeout" onclick="stopTimeout()">
+     </div>
+     <div>
+        <input type="button" value="Start interval" onclick="startInterval()">
+     </div>
+     <div>
+        <input type="button" value="Stop interval" onclick="stopInterval()">
+     </div> -->
+
+    <!--JavaScript Cookies
+
+    <div>
+      <input
+        type="button"
+        value="Set name cookie"
+        onclick="setCookie('name','Rakib Hossain', 3)"
+      />
+    </div>
+    <div>
+      <input
+        type="button"
+        value="Set username cookie"
+        onclick="setCookie('username','junior', 2)"
+      />
+    </div>
+    <div>
+      <input
+        type="button"
+        value="Get name cookie"
+        onclick="alert(getCookie('name'))"
+      />
+    </div>
+    <div>
+      <input
+        type="button"
+        value="Get username cookie"
+        onclick="alert(getCookie('username'))"
+      />
+    </div>
+    <div>
+      <input
+        type="button"
+        value="check username cookie"
+        onclick="checkCookie('username')"
+      />
+    </div>
