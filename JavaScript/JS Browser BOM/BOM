@@ -1,0 +1,174 @@
+// Browser Object Model (BOM) -> pura browser hocche Bom
+// js object er modde thake  methods and properties
+
+//Window Object 
+//inner screen height,width 
+
+
+ **select dom element
+const width = document.getElementById('width');
+const height = document.getElementById('height');
+
+//show window object properties
+ width.innerHTML = "window inner width is:" + window.innerWidth;
+ height.innerHTML = "window inner height is:"+ window.innerHeight;
+
+ let = myWindow // golbal variable 
+
+ function openWindow(){
+    myWindow =  window.open("https://google.com");
+ }
+
+ function closeWindow(){
+    myWindow.close();
+ }
+
+ //js Window Screen -> ekta object & pura monitar ta screen
+
+ const width = document.getElementById('width')
+ const height = document.getElementById('height')
+ const availWidth = document.getElementById('availWidth')
+ const availHeight = document.getElementById('availHeight')
+ const colorDepth = document.getElementById('colorDepth')
+ const pixelDepth = document.getElementById('pixelDepth')
+ 
+
+width.innerHTML =  screen.width;
+height.innerHTML =  screen.height;
+availWidth.innerHTML = screen.availWidth;
+availHeight.innerHTML = screen.availHeight;
+colorDepth.innerHTML = screen.colorDepth;
+pixelDepth.innerHTML = screen.pixelDepth
+
+
+//Js Window Location
+
+//Window History -> window.history object contains the browsers history.
+
+ function goBack() {
+    window.history.back()
+  }
+
+  function goForward() {
+    window.history.forward()
+  } 
+  // Window Navigator -> ekta browser er sob information pawa jay
+
+
+//JavaScript Popup Boxes
+//JavaScript has three kind of popup boxes: Alert box, Confirm box, and Prompt box.
+
+const confirm = document.getElementById("confirm");
+const prompt = document.getElementById("prompt");
+
+function showAlert(){
+   window.alert("Hello");
+}
+
+function showConfirm(){
+   let txt;
+
+   if(window.confirm("press a button!")){
+      txt = "you pressed ok!";
+   } else{
+       txt= "you pressed cancel!";
+   }
+   confirm.innerHTML = txt;
+}
+
+ function showPrompt(){
+   let person = window.prompt("Enter your name:", "Baby");
+    let txt;
+    
+    if(person === null || person === ""){
+      txt = "cancelled the prompt!";
+    } else{
+       txt = "Hello" + person + "! How are you?";
+    }
+    prompt.innerHTML = txt;
+ } 
+
+
+ //Timing Events * most important  topic *
+
+ // setTimeout(function, milliseconds) ->Executes a function, after waiting a specified number of milliseconds.
+ // ekta function ke executes korbe jeto millisecond dibo tar por.
+ // setInterval(function, milliseconds) -> Same as setTimeout(), but repeats the execution of the function continuously.
+   
+ const timeout = document.getElementById('timeout');
+ const interval = document.getElementById('interval');
+
+ let  timeoutInstance;
+
+ function startTimeout(){
+   timeoutInstance = setTimeout( function(){
+      timeout.innerHTML = '3 second over';
+    }, 3000)
+ }
+ // clearTimeout kaj hocche - uporer function execute hote smy lagbe 3 second ,so akhn jodi amra chay excute hower aghe stop kore dibo tai calerTimeout function use kora hoyese  
+ function stopTimeout(){
+   clearTimeout( timeoutInstance);
+ }
+
+ let intervalInstance;
+ function startInterval(){
+   intervalInstance = setInterval( function(){
+      interval.innerHTML = new Date().toLocaleTimeString();
+    }, 1000)
+ }
+
+ function stopInterval(){
+     clearInterval(intervalInstance);
+ } 
+
+ //JavaScript Cookies * Most Important *
+  // Set Cookie, Get Cookie, Check Cookie 
+
+
+ function  setCookie(cname, cvalue, exdays){
+    const d = new Date();
+    d.setTime(d.getTime() + exdays * 24 * 60 *  60 * 1000);
+    let expires  = "expires =" + d.toUTCString();
+
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/"; 
+ }
+ 
+ function getCookie(cname){
+    let name = cname + "=";
+    let ca = document.cookie.split(";")
+
+     for(let i=0; i<ca.length;i++){
+       let c = ca[i];
+       
+       while(c.charAt(0) === " "){
+         c = c.substring(1);
+       }
+
+       if(c.indexOf(name) === 0)
+       return c.substring(name.length);
+     }
+     return "";
+ }
+
+ function checkCookie(cname, exdays) {
+   let name;
+   let a = getCookie(cname);
+   if (a != "") {
+    alert("Welcome again " + a);
+   } else {
+     name = prompt("Please enter your name:", "");
+     if (name != "" && name != null) {
+       setCookie(cname, name, exdays);
+     }
+   }
+}
+
+
+
+
+
+
+
+
+
+
