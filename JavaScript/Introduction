@@ -9,7 +9,7 @@
   // Let 
   //let can't redeclared
   //let block scop
-  //let can reassign
+  //let can reassign in the same scope
 
   let x = 10;
  {
